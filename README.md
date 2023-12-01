@@ -88,4 +88,8 @@ These three plots were selected because they are based on the two variables that
 For the Attrition dashboard, the variables that were used in the attrition classification model were used. This dashboard shows how attrition can be analyzed across each of the key variables selected and the same conclusions found from the EDA process is demonstrated. 
 
 # Challenges
+<<<<<<< HEAD
 Learning how to use a classification and select the right type was a challenge for both team members. If given more time, we'd like to learn more about how to interpret recall for machine learning models like the classification model. 
+=======
+Learning how to use a classification and select the right type was a challenge for both team members. If given more time, we'd like to learn more about how to interpret recall for machine learning models like the classification model. 
+>>>>>>> 7d87d1685e175de7be2db083a8873e7c65d6a765
