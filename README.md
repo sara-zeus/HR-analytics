@@ -23,17 +23,18 @@ The following checks/transformations were completed:
 - Dropped irrelevant columns (i.e only 1 value such EmployeeCount containing 1's and StandardHours containing 80's)
 - Transformations: PercentColumns were converted into decimal formats. During Models, categorical data was converted using label encoding. 
 
-2. Performing EDA
+3. Performing EDA
 General EDA was performed to get statistics of the full dataset using .describe()
 
 Salary Increase:
 
 Salary Increase Variables were determined to as (TotalWorkingYears, YearsAtCompany, YearsInCurrentRole, YearsSinceLastPromotion, YearsWithCurrManager, PerformanceRating)
 1. boxplot and kdeplot
-These visuals were set up together to understand the distribution of each salary variable in relation to the salaryhike. The resulting visuals show that majority of the variables have left skewed data.   
+These visuals were set up together to understand the probability distributions of each variable (the likelihood of finding data points across the range of the x axis). The resulting visuals show that majority of the variables have left skewed data.   
 2. Pairplot (scatter plots)
+The scatter plots were used to visualize any correlations by looking at all the data points between each combination of variable. 
 3. Correlation Heatmap
-Both the pairplot and correlation visuals were used to to understand the overall correlation of each variable. Looking at the PercentHike correlations, the two highest correlation values are Performance Rating and YearsAtCompany.
+The correlation heatmap was used to calculate the corelation between each combination of variable. When looking at at the PercentHike correlations, the two highest correlation values are Performance Rating and YearsAtCompany.
 
 
 Attrition 
@@ -53,17 +54,38 @@ Income: People who left the company had lower average salaries than those who st
 Overtime: A key takeaway is that when employees are working overtime, they're more likely to leave the company than stay. 
 
 
-3. Regression Model - Predicting Salary Increases
-Using a backwards selection process, we begin by evaluating the most revelant metrics (TotalWorkingYears, YearsAtCompany, YearsInCurrentRole, YearsSinceLastPromotion, YearsWithCurrManager, PerformanceRating) in a multiple regression model using the OLS models from the statsmodels library. We evaluate the model outputs and determine the significance of a variable based on if it's p-value is greater than 0.05.
+4. Regression Model - Predicting Salary Increases
+Using a backwards selection process, we began by evaluating the most revelant metrics (TotalWorkingYears, YearsAtCompany, YearsInCurrentRole, YearsSinceLastPromotion, YearsWithCurrManager, PerformanceRating) in a multiple regression model using the OLS models from the statsmodels library. We evaluate the model outputs and determine the significance of a variable based on if it's p-value is greater than 0.05.
 After performing the multiple regression models, a model was finalized containing Years at Company and Performance Rating as the significant variables. This means that the company can use an employees tenure and their corresponding performance rating to evaluate an upcoming salary increase.  
 
 Bonus: Classification Model - Predicting Attrition
 After reviewing the dataset's variables, it was determined that the relevant metrics for predicting attrition based on context would be Gender, Age, PerformanceRating, EducationField, MonthlyIncome, OverTime. Since many of these variables are categorical datatypes, we chose to convert values using label encoding (such as gender, education field, etc).
-A classification model was conducted using   
+A classification model was conducted using RandomForestClassifier. 
+
+The results provided can be summarized as follows:  
+Accuracy: The model's overall accuracy is 85% (how many times it was correct for both outcomes out of the total number of attempts).
+
+Precision:
+No's (0): The precision is 89%. Out of all the times the model predicted class 0, 89% were actually class 0.
+Yes's (1): The precision is 38%. Out of all the times the model predicted class 1, only 38% were actually class 1.
+
+In conclusion, although the overall accuracy is high, it can be misleading because of it's precision. The model can accurately predict if an employee is going to stay, but misses when trying to predict if an employee will leave. 
 
 
+5. Tableau: 
+A dashboard that compiled the visuals created during the EDA process has been prepared. 
 
-Tableau: 
-A dashboard that compiled the visuals created during the EDA process has been prepared. For the attrition dashboard, it allows the user to interpret the relevant categories based on selecting an attrition value (Yes for leaving the company or No for staying). 
+Dashboard Instructions:  
+Salary Increase Dashboard 
+- Use the legend in the top right corner as a filter to analyze 
+Attrition Dashboard 
+- Use the legend in the top right corner as a filter to analyze what were the results for each variable in terms of attrition result (Yes for leaving the company or No for staying). 
 
-Refer to the Dashboard Instruction Document on how to use the dashboard. 
+Insights: 
+For the Salary Increase Dashboard, it can seen be through the scatterplot that employees who got a performance rating of 3 can only get a maximum of 15% increase whereas employees who got a performance rating of 4 got at least 21-25%. The performance rating bar plot also provides information the employee's average salary increase and the gap is still present. The last plot shows a similar comparison but instead for years at the company.  
+These three plots were selected because they are based on the two variables that were used in the final regression model. 
+
+For the Attrition dashboard, the variables that were used in the attrition classification model were used. This dashboard shows how attrition can be analyzed across each of the key variables selected and the same conclusions found from the EDA process is demonstrated. 
+
+# Challenges
+Learning how to use a classification and select the right type was a challenge for both team members. If given more time, we'd like to learn more about how to interpret recall for machine learning models like the classification model. 
