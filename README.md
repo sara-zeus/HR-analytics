@@ -58,10 +58,10 @@ Bonus: Classification Model - Predicting Attrition
 Here are the dashboards created as part of the project, showcasing the insights and analysis:
 
 ### First Dashboard
-![First Dashboard](firstDashboard.png)
+![First Dashboard](images/firstDashboard.png)
 
 ### Second Dashboard
-![Second Dashboard](secondDashboard.png)
+![Second Dashboard](images/secondDashboard.png)
 
 ---
 
