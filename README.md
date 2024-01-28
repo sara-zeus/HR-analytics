@@ -48,6 +48,25 @@ Bonus: Classification Model - Predicting Attrition
 - Learning classification model selection and interpretation of recall
 - Desire to explore more in-depth machine learning model interpretations
 
+
+# Midterm Project 📚: HR Data Analysis & Visualization
+
+<!-- Your existing content -->
+
+## Dashboards 📊
+
+Here are the dashboards created as part of the project, showcasing the insights and analysis:
+
+### First Dashboard
+![First Dashboard](firstDashboard.png)
+
+### Second Dashboard
+![Second Dashboard](secondDashboard.png)
+
+---
+
+**Note:** This project is part of an academic exercise in data analysis and visualization.
+
 ---
 
 **Note:** This project is part of an academic exercise in data analysis and visualization.
