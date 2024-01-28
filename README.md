@@ -66,4 +66,3 @@ Here are the dashboards created as part of the project, showcasing the insights 
 
 ---
 
-**Note:** This project is part of an academic exercise in data analysis and visualization.
