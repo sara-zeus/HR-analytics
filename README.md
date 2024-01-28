@@ -49,9 +49,6 @@ Bonus: Classification Model - Predicting Attrition
 - Desire to explore more in-depth machine learning model interpretations
 
 
-# Midterm Project 📚: HR Data Analysis & Visualization
-
-<!-- Your existing content -->
 
 ## Dashboards 📊
 
