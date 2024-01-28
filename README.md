@@ -7,7 +7,7 @@ The goal of this project is to demonstrate data analysis techniques such as data
 Using a HR dataset provided by IBM, we will address the following questions: 
 1. What metrics can be used to help predict an employee's upcoming salary increase? 
 
-**Bonus: Classification Model - Predicting Attrition**
+🎯 **Bonus: Classification Model - Predicting Attrition** 🎯
 
 ![Data Analysis GIF](https://media.giphy.com/media/RiykPw9tgdOylwFgUe/giphy.gif)
 
