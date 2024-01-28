@@ -1,4 +1,4 @@
-📚 HR Data Analysis & Visualization 
+# 📚 HR Data Analysis & Visualization 
 
 ## Project Goal 🎯
 The goal of this project is to demonstrate data analysis techniques such as data cleaning and performing EDA using Python along with producing dashboards to present business solutions.    
